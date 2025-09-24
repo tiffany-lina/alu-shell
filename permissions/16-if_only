@@ -1,2 +1,2 @@
 #!/bin/bash
-if [ -e hello ] then  if [ "$(stat -c %U hello)" = "guillaume" ] then sudo chown vincent hello  fi fi
+owner=$(ls -l hello | awk '{print $3}') if [ "$owner" = "guillaume" ] then  sudo chown vincent hello fi ls -l hello | awk '{print $3}'
