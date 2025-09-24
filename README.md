@@ -1,1 +1,0 @@
-- 2-groups: prints all groups the current user is part of
