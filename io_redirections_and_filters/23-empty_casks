@@ -1,0 +1,4 @@
+#!/bin/bash
+find . -type f -empty -o -type d -empty | while read f; do
+    echo "${f##*/}"
+done

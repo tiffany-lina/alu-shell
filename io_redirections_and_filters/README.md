@@ -15,3 +15,4 @@ Task 19: 19-AZ replaces all occurrences of 'A' with 'Z' and 'c' with 'e' from in
 Task 20: 20-hiago removes all occurrences of letters 'c' and 'C' from input read via stdin.
 Task 21: 21-reverse reverses its input read via stdin.
 Task 22: 22-users_and_homes displays all users and their home directories from /etc/passwd, sorted alphabetically by username.
+Task 23: 23-empty_casks lists all empty files and directories (including hidden) in the current directory and subdirectories, showing only their names.
