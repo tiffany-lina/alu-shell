@@ -8,3 +8,4 @@ Task 12: 12-newest_files displays the 10 newest files in the current directory, 
 Task 13: 13-unique prints words that appear exactly once from a list of words given via stdin. Output is sorted, one word per line.
 Task 14: 14-findthatword displays all lines from /etc/passwd that contain the pattern "root".
 Task 15: 15-countthatword displays the number of lines in /etc/passwd that contain the pattern "bin".
+Task 16: 16-whatsnext displays lines containing "root" and 3 lines after each match from /etc/passwd.
