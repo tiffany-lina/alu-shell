@@ -12,4 +12,4 @@ Task 16: 16-whatsnext displays lines containing "root" and 3 lines after each ma
 Task 17: 17-hidethisword displays all lines from /etc/passwd that do not contain the pattern "bin".
 Task 18: 18-letteronly displays all lines from /etc/ssh/sshd_config that start with a letter (uppercase or lowercase).
 Task 19: 19-AZ replaces all occurrences of 'A' with 'Z' and 'c' with 'e' from input read via stdin.
-
+Task 20: 20-hiago removes all occurrences of letters 'c' and 'C' from input read via stdin.
