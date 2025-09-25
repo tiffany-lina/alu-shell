@@ -6,3 +6,4 @@ Task 10: 10-no_more_js deletes all regular .js files recursively in the current 
 Task 11: 11-directories counts all directories and subdirectories (including hidden) in the current directory, excluding . and ..
 Task 12: 12-newest_files displays the 10 newest files in the current directory, one per line, newest first.
 Task 13: 13-unique prints words that appear exactly once from a list of words given via stdin. Output is sorted, one word per line.
+Task 14: 14-findthatword displays all lines from /etc/passwd that contain the pattern "root".
