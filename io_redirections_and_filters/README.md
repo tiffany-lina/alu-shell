@@ -13,3 +13,4 @@ This project contains scripts that demonstrate:
 - 3-twofiles: displays the content of /etc/passwd and /etc/hosts to standard output
 - 4-lastlines: displays the last 10 lines of the /etc/passwd file to standard output
 - 5-firstlines: displays the first 10 lines of the /etc/passwd file to standard output
+- 7-file: creates a file named '*\\'"Best School"\'\\*$\?\*\*\*\*\*:)' containing the text "Best School" ending with a new line
