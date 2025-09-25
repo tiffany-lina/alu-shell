@@ -7,3 +7,4 @@ Task 11: 11-directories counts all directories and subdirectories (including hid
 Task 12: 12-newest_files displays the 10 newest files in the current directory, one per line, newest first.
 Task 13: 13-unique prints words that appear exactly once from a list of words given via stdin. Output is sorted, one word per line.
 Task 14: 14-findthatword displays all lines from /etc/passwd that contain the pattern "root".
+Task 15: 15-countthatword displays the number of lines in /etc/passwd that contain the pattern "bin".
