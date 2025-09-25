@@ -17,3 +17,4 @@ Task 21: 21-reverse reverses its input read via stdin.
 Task 22: 22-users_and_homes displays all users and their home directories from /etc/passwd, sorted alphabetically by username.
 Task 23: 23-empty_casks lists all empty files and directories (including hidden) in the current directory and subdirectories, showing only their names.
 Added 24-gifs script to list .gif files without extensions.
+Added 25-acrostic script to decode acrostics using the first letter of each line.
