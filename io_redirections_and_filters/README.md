@@ -12,3 +12,4 @@ This project contains scripts that demonstrate:
 - 2-hellofile: displays the content of the /etc/passwd file to standard output
 - 3-twofiles: displays the content of /etc/passwd and /etc/hosts to standard output
 - 4-lastlines: displays the last 10 lines of the /etc/passwd file to standard output
+- 5-firstlines: displays the first 10 lines of the /etc/passwd file to standard output
