@@ -1,9 +1,5 @@
-# 0-hello_world
+# Shell I/O Redirections and Filters
 
-## Description
-This script prints "Hello, World" followed by a new line.  
-It is a Bash script and starts with the shebang `#!/bin/bash`.
+This project contains scripts that demonstrate:
 
-## Usage
-```bash
-./0-hello_world
+- 0-hello_world: prints "Hello, World" followed by a new line to standard output
