@@ -9,3 +9,4 @@ Task 13: 13-unique prints words that appear exactly once from a list of words gi
 Task 14: 14-findthatword displays all lines from /etc/passwd that contain the pattern "root".
 Task 15: 15-countthatword displays the number of lines in /etc/passwd that contain the pattern "bin".
 Task 16: 16-whatsnext displays lines containing "root" and 3 lines after each match from /etc/passwd.
+Task 17: 17-hidethisword displays all lines from /etc/passwd that do not contain the pattern "bin".
