@@ -7,4 +7,5 @@
 6-create_local_variable: Creates a new local variable BEST with value School
 7-create_global_variable: Creates a new global variable BEST with value School
 8-true_knowledge: Prints the result of 128 plus the value stored in TRUEKNOWLEDGE
+9-divide_and_rule: Prints the result of POWER divided by DIVIDE
 
