@@ -18,3 +18,4 @@ Task 22: 22-users_and_homes displays all users and their home directories from /
 Task 23: 23-empty_casks lists all empty files and directories (including hidden) in the current directory and subdirectories, showing only their names.
 Added 24-gifs script to list .gif files without extensions.
 Added 25-acrostic script to decode acrostics using the first letter of each line.
+Added 26-the_biggest_fan script to display the 11 hosts or IP addresses with the most requests from web server logs.
