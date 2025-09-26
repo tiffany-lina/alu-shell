@@ -16,4 +16,5 @@
 15-rot13: Encodes and decodes text using rot13 encryption:
 16-odd: Prints every other line from input, starting with the first
 17-water_and_stir: Adds WATER and STIR and prints result in base bestchol
+:wq
 
