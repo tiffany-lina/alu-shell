@@ -1,2 +1,2 @@
 #!/bin/bash
-owner=$(ls -l hello | awk '{print $3}') if [ "$owner" = "guillaume" ] then  sudo chown vincent hello fi ls -l hello | awk '{print $3}'
+find .-maxdepth 1 -name hello -user guillaume -exec chown vincent {}\+
