@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Reads /etc/passwd and prints a story about each user
+while IFS=: read -r username password userid groupid info homedir shell; do
+  : "$username"  # dummy use for ShellCheck
+  echo "The user $username is part of $groupid gang, lives in $homedir and rides $shell. $userid's place is protected by the passcode $password, more info about the user here: $info"
+done < /etc/passwd
+
