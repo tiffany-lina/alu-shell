@@ -2,8 +2,7 @@
 # Lists files showing only the part after the first dash
 for file in *
 do
-  : $file  # dummy use for ShellCheck
-  if [[ -f $file || -d $file ]]; then
-    echo "${file#*-}"
-  fi
+  [[ -e $file ]] || continue   # use $file to satisfy ShellCheck
+  echo "${file#*-}"
 done
+
