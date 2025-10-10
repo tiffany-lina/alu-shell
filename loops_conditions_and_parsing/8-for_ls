@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Lists files showing only the part after the first dash
+for file in *
+do
+  : $file  # dummy use for ShellCheck
+  if [[ -f $file || -d $file ]]; then
+    echo "${file#*-}"
+  fi
+done
