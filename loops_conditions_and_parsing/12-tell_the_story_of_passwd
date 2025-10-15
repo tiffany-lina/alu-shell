@@ -1,9 +1,13 @@
 #!/bin/bash
-# Script: 12-tell_the_story_of_passwd
-# Description: Displays a story of each user from /etc/passwd using while loop + IFS
+# File: 12-tell_the_story_of_passwd
 
-while IFS=: read -r username password userid groupid userinfo homedir shell
+while IFS=: read -r username password userid groupid info home shell
 do
-    echo "The user $username is part of the $groupid gang, lives in $homedir and rides $shell. $userid's place is protected by the passcode $password, more info about the user here: $userinfo"
+    # Set default values if empty
+    [[ -z "$info" ]] && info="$username"
+    [[ -z "$shell" ]] && shell="/bin/false"
+    [[ -z "$password" ]] && password="x"
+
+    echo "The user $username is part of the $groupid gang, lives in $home and rides $shell. $userid's place is protected by the passcode $password, more info about the user here: $info"
 done < /etc/passwd
 
