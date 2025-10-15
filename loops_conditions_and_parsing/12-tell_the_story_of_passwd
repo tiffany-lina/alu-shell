@@ -1,5 +1,6 @@
 #!/bin/bash
-# Script that tells the story of /etc/passwd using while loop and IFS
+# Script: 12-tell_the_story_of_passwd
+# Description: Displays a story of each user from /etc/passwd using while loop + IFS
 
 while IFS=: read -r username password userid groupid userinfo homedir shell
 do
