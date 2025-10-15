@@ -2,9 +2,9 @@
 # File: 12-tell_the_story_of_passwd
 
 counter=0
-while IFS=: read -r username password userid groupid info home shell
+while IFS=: read -r username password groupid info home shell
 do
-    # Set default/dummy values
+    # Set defaults
     [[ -z "$info" ]] && info="$username"
     [[ -z "$shell" ]] && shell="/usr/sbin/nologin"
     [[ -z "$password" ]] && password="x"
