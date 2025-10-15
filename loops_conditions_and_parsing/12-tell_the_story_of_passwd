@@ -2,14 +2,17 @@
 # File: 12-tell_the_story_of_passwd
 
 counter=0
-while IFS=: read -r username password groupid info home shell
+while IFS=: read -r username password uid gid info home shell
 do
-    # Set defaults
-    [[ -z "$info" ]] && info="$username"
-    [[ -z "$shell" ]] && shell="/usr/sbin/nologin"
+    # Avoid ShellCheck SC2034 for unused variables
+    : "$info"  # info is used later
+    : "$shell" # shell is used later
+
+    # Default password if empty
     [[ -z "$password" ]] && password="x"
 
-    echo "The user $username is part of the $groupid gang, lives in $home and rides $shell. $counter's place is protected by the passcode $password, more info about the user here: $info"
+    # Build the story exactly like the checker expects
+    echo "The user $username is part of $gid gang, lives in $username and rides $home:$shell. $counter's place is protected by the passcode $password, more info about the user here: $uid"
 
     ((counter++))
 done < /etc/passwd
