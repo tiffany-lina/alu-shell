@@ -1,6 +1,22 @@
 #!/usr/bin/env bash
-# File: 14-dig_the-data
+# Script: group and sort Apache log visitors by IP and HTTP code
 
-# Count occurrences of IP + HTTP_CODE and sort from highest to lowest
-awk '{count[$1" "$9]++} END {for (pair in count) printf "%d %s\n", count[pair], pair}' apache-access.log | sort -nr
+# Exit if log file is missing
+[[ ! -f apache-access.log ]] && { echo ""; exit 0; }
+
+# Use awk to count IP + HTTP_CODE safely
+awk '
+# Only process lines with at least 9 fields
+NF>=9 {
+    ip = $1
+    code = $9
+    count[ip" "code]++
+}
+END {
+    for (pair in count) {
+        # Print in exact format: OCCURENCE_NUMBER IP HTTP_CODE
+        printf "%d %s\n", count[pair], pair
+    }
+}
+' apache-access.log | sort -nr
 
