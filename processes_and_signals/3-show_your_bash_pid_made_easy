@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Display PID and process name for processes containing "bash"
+/bin/ls /proc | grep -E '^[0-9]+$' | while read pid; do
+    name=$(cat /proc/$pid/comm 2>/dev/null)
+    [[ "$name" == *bash* ]] && echo "$pid $name"
+done
+
