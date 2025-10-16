@@ -2,5 +2,5 @@
 # File: 14-dig_the-data
 
 # Count occurrences of IP + HTTP_CODE and sort from highest to lowest
-awk '{count[$1" "$9]++} END {for (pair in count) print count[pair], pair}' apache-access.log | sort -nr
+awk '{count[$1" "$9]++} END {for (pair in count) printf "%d %s\n", count[pair], pair}' apache-access.log | sort -nr
 
