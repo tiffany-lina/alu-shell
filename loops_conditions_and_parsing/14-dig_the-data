@@ -1,22 +1,5 @@
 #!/usr/bin/env bash
 # Script: group and sort Apache log visitors by IP and HTTP code
 
-# Exit if log file is missing
-[[ ! -f apache-access.log ]] && { echo ""; exit 0; }
-
-# Use awk to count IP + HTTP_CODE safely
-awk '
-# Only process lines with at least 9 fields
-NF>=9 {
-    ip = $1
-    code = $9
-    count[ip" "code]++
-}
-END {
-    for (pair in count) {
-        # Print in exact format: OCCURENCE_NUMBER IP HTTP_CODE
-        printf "%d %s\n", count[pair], pair
-    }
-}
-' apache-access.log | sort -nr
+awk 'NF>=9 {count[$1" "$9]++} END {for (pair in count) printf "%d %s\n", count[pair], pair}' apache-access.log | sort -nr
 
