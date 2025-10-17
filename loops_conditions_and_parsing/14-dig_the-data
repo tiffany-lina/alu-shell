@@ -1,5 +1,3 @@
 #!/usr/bin/env bash
-# Group visitors by IP and HTTP code, print occurrences sorted descending
-
-awk 'NF>=9 { count[$1" "$9]++ } END { for (k in count) { split(k,a," "); printf "%d %s %s\n", count[k], a[1], a[2] } }' apache-access.log | sort -nr
-
+# This script groups Apache log visitors by IP and HTTP status, sorted by occurrence
+awk '{count[$1" "$9]++} END {for (i in count) print count[i], i}' /var/log/apache2/access.log | sort -rn
