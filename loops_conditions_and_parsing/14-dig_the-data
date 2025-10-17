@@ -1,33 +1,13 @@
 #!/usr/bin/env bash
-# 14-dig_the-data
-# Groups visitors by IP and HTTP status, ordered by number of occurrences
-# Handles empty or wrong-format logs, uses only awk for processing
+# 14-dig_the-data_clean
+# Groups visitors by IP and HTTP status, ordered by occurrence
+# Uses only awk, no loops in Bash
 
 LOG_FILE="${1:-access.log}"
 
-awk '
-BEGIN { 
-    # exit immediately if file is empty
-    if (ARGC < 2) exit
-}
-{
-    # Only process lines with at least 9 fields and numeric HTTP code
-    if (NF >= 9 && $9 ~ /^[0-9]+$/) {
-        count[$1" "$9]++
-    }
-}
-END {
-    # Save counts in array for sorting
-    for (key in count) {
-        occ[count[key]] = occ[count[key]] " " key
-    }
-    # Sort descending
-    n = asorti(occ, sorted_counts)
-    for (i = n; i >= 1; i--) {
-        split(occ[sorted_counts[i]], pairs, " ")
-        for (j in pairs) {
-            if (pairs[j] != "") print sorted_counts[i], pairs[j]
-        }
-    }
-}' "$LOG_FILE"
+# Exit if file is empty
+[[ ! -s "$LOG_FILE" ]] && exit 0
 
+# Process log with awk and sort
+awk '{if (NF>=9 && $9 ~ /^[0-9]+$/) count[$1" "$9]++} 
+     END {for (k in count) print count[k], k}' "$LOG_FILE" | sort -nr
