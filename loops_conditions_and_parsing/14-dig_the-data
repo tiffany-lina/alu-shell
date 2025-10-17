@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
-# Group Apache visitors by IP and HTTP status
-awk '{print $1, $9}' /var/log/apache2/access.log | sort | uniq -c | sort -nr | awk '{print $1, $2, $3}'
+# Group visitors by IP and HTTP status code
+
+awk '{print $1, $9}' 2>/dev/null | sort | uniq -c | sort -nr | awk '{print $1, $2, $3}'
