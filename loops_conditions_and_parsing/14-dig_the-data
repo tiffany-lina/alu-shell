@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # 14-dig_the-data
 # Groups visitors by IP and HTTP status, ordered by number of occurrences
 # Handles empty or wrong-format logs, uses only awk for processing
